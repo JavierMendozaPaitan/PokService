@@ -1,0 +1,76 @@
+﻿@model DataProvDomBase.Models.PkDtDb.PokDat
+@{
+    ViewData["Title"] = "Pokedex Search";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<h4>Show Pokedex</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="">
+            <div class="form-group">
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.IntId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Name.English)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Base.HP)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Base.Attack)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Base.Defense)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Base.Speed)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @{
+                                        var img = Model.IntId.ToString("D3");
+                                        var imgpth = $@"images\{img}.png";
+                                        <img src="@imgpth" alt="Thumbnail" width="300" />
+                                    }
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelitem => modelitem.IntId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelitem => modelitem.Name.English)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelitem => modelitem.Base.HP)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelitem => modelitem.Base.Attack)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelitem => modelitem.Base.Defense)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelitem => modelitem.Base.Speed)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>

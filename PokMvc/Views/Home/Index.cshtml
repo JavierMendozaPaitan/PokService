@@ -1,0 +1,78 @@
+﻿@model DataProvDomBase.Reports.PokDatLst
+@{
+    ViewData["Title"] = "Pokedex Search";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<h4>Test Pokedex Search</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="Home" asp-action="Index">
+            <p>
+                <div class="form-group">
+                    <select asp-for="PokSelect" asp-items="Model.SelOpts">
+                        <option value="">All</option>
+                    </select>
+                    Text: <input type="text" id="text" name="text" />
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                </div>
+            </p>
+        </form>
+        <form asp-action="">
+            <div class="form-group">
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Lst[0].IntId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Lst[0].Name.English)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Lst[0].Base.Attack)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Lst[0].Base.Defense)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Lst)
+                            {
+                                <tr>
+                                    <td>
+                                        @{
+                                            var img = item.IntId.ToString("D3");
+                                            var imgpth = $@"thumbnails\{img}.png";
+                                            <a href="@Url.Action("Pokedex", "Home", new { id = item.IntId})">
+                                                <img src="@imgpth" alt="Thumbnail" width="100" />
+                                            </a>
+
+                                        }
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelitem => item.IntId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelitem => item.Name.English)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelitem => item.Base.Attack)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelitem => item.Base.Defense)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
