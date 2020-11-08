@@ -24,6 +24,19 @@ namespace PokMvc.Controllers
 
         private readonly PokSrv pok;
 
+        public IActionResult Test()
+        {
+            try
+            {                
+
+                return View();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<IActionResult> Index(string text, string PokSelect)
         {
             try

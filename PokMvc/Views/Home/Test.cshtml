@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<div>
+    <h1 id="test">It is a test</h1>
+    <div id="tarr"></div>
+
+    <script>
+        (function () {
+            document.getElementById("test").innerHTML = "To change...";
+        })();
+        
+    </script>
+    <script src="~/js/site.js"></script>
+    <script>
+        (function () {
+            ftarr('tarr');
+        })();
+    </script>    
+    <button onclick="ftest('test','jola')">Test</button>
+    <button onclick="fdate(this)" >Date</button>
+    <button onclick="window.print()">Print</button>
+    <div>
+        <button onclick="ftarr('test')">Show Array</button>
+    </div>
+    <div>
+        <input id="itest" type="number" min="12" max="20" required />
+        <button onclick="fchk('itest', 'test')">Check</button>
+    </div>
+</div>

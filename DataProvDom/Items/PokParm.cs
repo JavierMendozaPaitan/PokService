@@ -7,14 +7,12 @@ using DataProvDomBase.Config.MongoDb;
 using DataProvDomBase.Interfaces;
 using Microsoft.Extensions.Configuration;
 using WAppDom.Services;
-using WAppDomBase.Bases;
 
 namespace DataProvDom.Items
 {
-    public class PokParm : ParmBase, IPokParm
+    public class PokParm : IPokParm
     {
         public PokParm(IConfiguration cfg)
-            : base(cfg)
         {
             try
             {
