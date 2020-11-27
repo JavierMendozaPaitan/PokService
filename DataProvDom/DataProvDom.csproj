@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataProvDomBase\DataProvDomBase.csproj" />
-    <ProjectReference Include="..\WAppDom\WAppDom.csproj" />
   </ItemGroup>
 
 </Project>
