@@ -10,8 +10,8 @@ using DataProvDomBase.Config.MongoDb;
 using DataProvDomBase.Interfaces;
 using DataProvDomBase.Models.PkDtDb;
 using MongoDB.Driver;
-using WAppDom.Actions;
-using WAppDomBase.Interfaces.Dbs;
+using WppDom.Actions;
+using WppDomBase.Interfaces.Dbs;
 
 namespace DataProvDom.Items
 {

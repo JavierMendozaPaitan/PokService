@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WAppDomBase.Interfaces.Dbs;
+using WppDomBase.Interfaces.Dbs;
 
 namespace DataProvDomBase.Interfaces
 {

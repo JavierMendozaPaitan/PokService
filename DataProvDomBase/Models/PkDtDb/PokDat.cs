@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization.IdGenerators;
-using WAppDomBase.Interfaces.Models;
+using WppDomBase.Interfaces.Models;
 
 namespace DataProvDomBase.Models.PkDtDb
 {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DataProvDomBase.Config.MongoDb;
 using DataProvDomBase.Interfaces;
 using Microsoft.Extensions.Configuration;
-using WAppDom.Services;
+using WppDom.Services;
 
 namespace DataProvDom.Items
 {

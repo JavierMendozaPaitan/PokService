@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 using DataProvDomBase.Bases;
 using DataProvDomBase.Models.PkDtDb;
 using DataProvDomBase.Reports;
-using WAppDom.Actions;
-using WAppDomBase.Interfaces.HttpReq;
+using WppDom.Actions;
 
 namespace DataProvDom.Services
 {
